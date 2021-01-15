@@ -9,15 +9,10 @@
 .product-title {
   color: $accentdark;
   padding-bottom: 20px;
-  padding-right: 40px;
-  padding-left: 10px;
+  padding-right: $gutter;
 }
 
 .product-info {
-  .rating {
-    //margin-bottom: 20px;
-  }
-
   &-topline {
     .product-title {
       margin-right: auto;
@@ -211,6 +206,7 @@
 
 .slider-desktop {
   position: relative;
+  width: calc(100% - 20px);
 
   @include media-breakpoint-down(md) {
     display: none;
