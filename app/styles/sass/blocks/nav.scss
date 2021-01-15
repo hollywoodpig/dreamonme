@@ -1,0 +1,169 @@
+.nav {
+  margin: $gutter 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: unset;
+    justify-content: unset;
+  }
+
+  .hamburger {
+    display: none;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
+}
+
+.nav-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0.5;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: $gutter;
+  }
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  overflow-y: hidden;
+  transition: $trs;
+
+  &.active {
+    height: 219px; //have seen the width at chrome inspector
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: stretch;
+    height: 0;
+  }
+}
+
+.nav-item {
+  display: inline-block;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+    text-align: center;
+    padding: 8px 0 !important;
+  }
+
+  &.active {
+    background: $accent;
+    border-radius: 5px;
+    padding: 2px 8px;
+
+    .nav-link {
+      color: $white;
+
+      &::before {
+        content: unset;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 40px;
+
+    @include media-breakpoint-down(md) {
+      margin-right: 0;
+    }
+  }
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  color: $accentdark;
+  position: relative;
+  display: block;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: $accent;
+    transform: translateY(3px);
+    transition: $trs;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::before {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.nav .logo svg {
+  @include media-breakpoint-down(md) {
+    width: 200px;
+  }
+}
+
+.nav-menu {
+  font-size: 0;
+  padding: 0;
+}
+
+.nav-phone {
+  font-weight: 500;
+  color: $accentdark2;
+  font-size: 20px;
+  letter-spacing: 1px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: $gutter;
+    text-align: center;
+  }
+}
+
+.hamburger {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  &.active {
+    .hamburger-line {
+      &:nth-child(1) {
+        transform: translateY(6px + 10px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-(6px + 10px)) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 6px;
+  background: $accentdark;
+  transition: $trs;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

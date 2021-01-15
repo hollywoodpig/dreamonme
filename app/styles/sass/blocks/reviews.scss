@@ -1,0 +1,71 @@
+.review {
+  margin-bottom: 90px;
+}
+
+.review-topline {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-img {
+  max-width: 255px;
+}
+
+.reviews {
+  &-buttons {
+    margin-bottom: 80px;
+  }
+
+  .button {
+    width: 255px;
+  }
+
+  .col-12 {
+    @include media-breakpoint-up(lg) {
+      &:nth-child(1) {
+        .button {
+          transform: translateX(25%);
+        }
+      }
+
+      &:nth-child(2) {
+        .button {
+          transform: translateX(-25%);
+        }
+      }
+    }
+  }
+}
+
+// rating-stars style based on data-rate value
+
+@for $i from 1 through 5 {
+  .rating {
+    .rating-item {
+      svg {
+        stroke: #eb8003;
+        stroke-width: 1px;
+
+        path {
+          fill: none;
+        }
+      }
+    }
+
+    @for $j from $i through 5 {
+      &[data-rate='#{$j}'] {
+        .rating-item:nth-child(#{$i}) {
+          svg {
+            stroke: #eb8003;
+            stroke-width: 1px;
+
+            path {
+              fill: #eb8003;
+            }
+          }
+        }
+      }
+    }
+  }
+}

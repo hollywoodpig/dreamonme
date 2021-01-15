@@ -1,0 +1,119 @@
+// USER VARIABLES SECTION
+
+$accent: #51c7f9
+$accentdark: #4087bb
+$accentdark2: #5496c8
+$accentlight: #f4fbff
+$danger: #f9442b
+$success: #57ad62
+$gray: #888383
+$white: #fff
+$black: #000
+$fontsize: 16px // Body Font Size
+$lineheight: 1.65 // Document Line Height
+$trs: 0.3s ease
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$userfont: montserrat-dom, $systemfont // User Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('montserrat-dom', normal, 400, '../fonts/montserrat-400.woff2')
+@include font('montserrat-dom', normal, 500, '../fonts/montserrat-500.woff2')
+@include font('montserrat-dom', normal, 600, '../fonts/montserrat-600.woff2')
+@include font('montserrat-dom', normal, 700, '../fonts/montserrat-700.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: $gray
+
+::selection
+	background-color: $accentdark
+	color: $white
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: $danger
+	&:required:valid
+		border-color: $success
+
+dl, ol, ul
+	margin-bottom: 0
+
+button
+	padding: 0
+	border: none
+	background: none
+
+	&:focus
+		outline: none
+
+h1, h2, h3,
+h4, h5, h6
+	margin: 0
+
+h1
+	font-size: 48px
+
+	@include media-breakpoint-down(lg)
+		font-size: 26px
+
+h2
+	font-size: 30px
+	text-align: center
+
+	@include media-breakpoint-down(lg)
+		font-size: 20px
+
+h3
+	font-size: 18px
+
+	@include media-breakpoint-down(lg)
+		font-size: 16px
+
+h4
+	font-size: 14px
+
+b
+	font-size: 12px
+
+img
+	width: 100%
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	color: $black
+	background: $white
+	-webkit-font-smoothing: subpixel-antialiased
+
+.no-scroll
+	overflow: hidden
+
+.container
+	max-width: 1110px
+	margin: 0 auto
+	padding: 0 20px

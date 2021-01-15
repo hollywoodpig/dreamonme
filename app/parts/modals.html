@@ -1,0 +1,108 @@
+<div class="overlay"></div>
+<div class="review-form">
+  <button class="modal-close-button">
+    <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="31" cy="31" r="31" fill="white"/>
+      <path d="M44.1825 22.9691L39.4575 18.2441L31.2134 26.4882L22.9693 18.2441L18.2407 22.9727L26.4848 31.2167L18.2443 39.4573L22.9693 44.1823L31.2098 35.9418L39.4539 44.1859L44.1825 39.4573L35.9384 31.2132L44.1825 22.9691Z" fill="#37322B"/>
+    </svg>
+  </button>
+  <form style="margin-bottom: 20px;" class="container">
+    <h2 style="margin-bottom: 25px;" class="review-form-title">Оставить отзыв</h2>
+    <input style="margin-bottom: 15px;" class="input" placeholder="Имя" type="text">
+    <div style="margin-bottom: 25px;">
+      <label class="review-label">Оцените товар</label>
+      <div class="w-100 d-flex justify-content-center">
+        <div class="rating-selectable">
+          <span>
+            <input type="radio" name="rating" id="str1" value="1">
+            <label for="str1">
+              <svg stroke="#EB8003" stroke-width="1" width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z"/>
+              </svg>
+            </label>
+          </span>
+          <span>
+            <input type="radio" name="rating" id="str2" value="2">
+            <label for="str2">
+              <svg stroke="#EB8003" stroke-width="1" width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z"/>
+              </svg>
+            </label>
+          </span>
+          <span>
+            <input type="radio" name="rating" id="str3" value="3">
+            <label for="str3">
+              <svg stroke="#EB8003" stroke-width="1" width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z"/>
+              </svg>
+            </label>
+          </span>
+          <span>
+            <input type="radio" name="rating" id="str4" value="4">
+            <label for="str4">
+              <svg stroke="#EB8003" stroke-width="1" width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z"/>
+              </svg>
+            </label>
+          </span>
+          <span>
+            <input type="radio" name="rating" id="str5" value="5">
+            <label for="str5">
+              <svg stroke="#EB8003" stroke-width="1" width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z"/>
+              </svg>
+            </label>
+          </span>
+        </div>
+      </div>
+    </div>
+    <input id="upload-review-photo" style="display: none;" type="file">
+    <button style="margin-bottom: 25px; margin-top: 10px;" id="upload-review-photo-btn" type="button" class="button button-primary">Загрузить фото</button>
+    <textarea style="margin-bottom: 20px;" class="textarea" placeholder="Текст отзыва"></textarea>
+    <button type="submit" class="button button-primary">Оставить отзыв</button>
+  </form>
+</div>
+<div class="review-modal">
+  <button class="modal-close-button">
+    <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="31" cy="31" r="31" fill="white"/>
+      <path d="M44.1825 22.9691L39.4575 18.2441L31.2134 26.4882L22.9693 18.2441L18.2407 22.9727L26.4848 31.2167L18.2443 39.4573L22.9693 44.1823L31.2098 35.9418L39.4539 44.1859L44.1825 39.4573L35.9384 31.2132L44.1825 22.9691Z" fill="#37322B"/>
+    </svg>
+  </button>
+  <div class="review-full">
+    <img class="review-full-img" src="images/dist/review/1.jpg" alt="">
+    <div class="review-full-content">
+      <div class="review-full-topline">
+        <h3 class="review-full-title">Света света</h3>
+        <div data-rate="4" class="rating">
+          <a class="rating-item" href="#">
+            <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z" fill="#EB8003"/>
+            </svg>
+          </a>
+          <a class="rating-item" href="#">
+            <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z" fill="#EB8003"/>
+            </svg>
+          </a>
+          <a class="rating-item" href="#">
+            <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z" fill="#EB8003"/>
+            </svg>
+          </a>
+          <a class="rating-item" href="#">
+            <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z" fill="#EB8003"/>
+            </svg>
+          </a>
+          <a class="rating-item" href="#">
+            <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.9349 21.5569L22.5572 26L20.9085 16.5868L27.8821 9.92814L18.2461 8.56287L13.9349 0L9.63599 8.56287L0 9.92814L6.97357 16.5868L5.32483 26L13.9349 21.5569Z" fill="#EB8003"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p class="review-full-text">Отличная подушка! Были большие проблемы с шейным отделом позвоночника (сильные боли, переходящие в плечо и руку) после приобретения подушки проблемы значительно уменьшились (пользуюсь подушкой 3 недели). Удобно спать как на спине так и на боку. До этого у меня была ортопедическая подушка другой фирмы вот это был ужас: жесткая, голова опрокидывалась назад спать было невозможно. Рекомендую всем у кого есть проблемы аналогичные моим.</p>
+    </div>
+  </div>
+</div>

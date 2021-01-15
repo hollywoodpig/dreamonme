@@ -1,0 +1,45 @@
+.review-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.review-full {
+  display: flex;
+  flex-direction: column;
+
+  &-img {
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-content {
+    background: $white;
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+  }
+
+  &-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}

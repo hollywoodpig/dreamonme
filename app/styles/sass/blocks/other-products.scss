@@ -1,0 +1,38 @@
+.other-products {
+  background: $accentlight;
+  position: relative;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  &-title {
+    padding-bottom: $gutter * 2;
+  }
+}
+
+.other-product {
+  &:hover {
+    .other-product-name {
+      text-decoration: underline;
+    }
+  }
+}
+
+.other-product-name {
+  padding-top: 20px;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+}
+
+.other-product-img {
+  @include media-breakpoint-down(md) {
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
