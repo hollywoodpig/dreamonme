@@ -100,14 +100,33 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('no-scroll')
   })
 
-  /* slider */
+  /* slider mobile */
 
-  const swiper = new Swiper('.swiper-container', {
+  const swiper = new Swiper('.swiper-mobile', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     }
+  })
+
+  /* slide desktop */
+
+  const galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    loopedSlides: 5,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  })
+
+  const galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    loop: true,
+    loopedSlides: 5,
+    thumbs: {
+      swiper: galleryThumbs,
+    },
   })
 
 })
