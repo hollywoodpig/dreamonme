@@ -8,6 +8,7 @@
   backdrop-filter: blur(12px);
   z-index: 2;
   cursor: pointer;
+  transition: $trslong;
 
   opacity: 0;
   pointer-events: none;
@@ -35,24 +36,26 @@
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
+  transform: translate(-50%, -55%) scale(0.8);
   background: $white;
   border-radius: 60px;
   padding: $gutter;
   text-align: center;
   box-shadow: 7px 11px 13px 4px transparentize($black, 0.75);
   z-index: 3;
-
-  @include media-breakpoint-down(md) {
-    padding: $gutter / 2;
-  }
+  transition: $trs;
 
   opacity: 0;
   pointer-events: none;
 
   &.active {
+    transform: translate(-50%, -50%) scale(0.8);
     opacity: 1;
     pointer-events: all;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: $gutter / 2;
   }
 }
 
