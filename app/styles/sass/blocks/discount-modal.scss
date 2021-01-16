@@ -1,9 +1,9 @@
 .discount-modal {
-  width: 320px;
   border-radius: 40px !important;
   padding: $gutter * 1.5 !important;
+  width: 350px;
 
-  @media (max-width: 380px) {
+  @include media-breakpoint-down(sm) {
     width: 100%;
   }
 
@@ -17,8 +17,12 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -60px);
     z-index: 4;
+
+    svg {
+      height: 200px;
+    }
   }
 }
 
