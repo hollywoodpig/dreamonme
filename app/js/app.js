@@ -100,7 +100,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* slider mobile */
 
-  const swiper = new Swiper('.swiper-mobile', {
+  const swiperMobile = new Swiper('.swiper-mobile', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  })
+
+  /* slider other-products */
+
+  const swiperOtherProducts = new Swiper('.swiper-other-products', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
