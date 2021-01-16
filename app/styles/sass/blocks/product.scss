@@ -156,10 +156,23 @@
     border-color: $danger;
   }
 
+  &[placeholder] {
+    text-overflow: ellipsis;
+  }
+
   &::placeholder {
     font-size: 18px;
     color: $black;
     font-weight: 400;
+    text-indent: 0;
+    transition: $trs;
+    opacity: 1;
+  }
+
+  &:focus::placeholder {
+    text-indent: -5%;
+    opacity: 0;
+    transition: $trs;
   }
 }
 
