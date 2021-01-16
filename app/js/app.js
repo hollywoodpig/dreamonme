@@ -78,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* view review */
 
   const reviewModal = document.querySelector('.review-modal')
-  const reviewModalBtn = reviewModal.querySelector('.modal-close-button')
 
   document.querySelectorAll('.review-img').forEach(item => {
     item.addEventListener('click', e => {
@@ -97,12 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
       reviewModal.classList.add('active')
       document.body.classList.add('no-scroll')
     })
-  })
-
-  reviewModalBtn.addEventListener('click', () => {
-    reviewModal.classList.remove('active')
-    overlay.classList.remove('active')
-    document.body.classList.remove('no-scroll')
   })
 
   /* slider mobile */
