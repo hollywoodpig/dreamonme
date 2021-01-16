@@ -1,0 +1,27 @@
+.discount-modal {
+  max-width: 320px;
+  border-radius: 40px !important;
+  padding: $gutter * 1.5 !important;
+
+  &-text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+  }
+}
+
+.button-danger {
+  border-radius: 999px !important;
+  background: $danger;
+  border: none !important;
+  box-shadow: none !important;
+  color: $white;
+}

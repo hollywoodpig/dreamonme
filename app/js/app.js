@@ -23,12 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
     lazy: false
   })
 
-  /* add review */
+  /* modals */
 
   const addReviewBtn = document.getElementById('add-review')
+
   const reviewForm = document.querySelector('.review-form')
   const overlay = document.querySelector('.overlay')
   const closeModalBtn = document.querySelector('.modal-close-button')
+  const discountModal = document.querySelector('.discount-modal');
+
+  discountModal.classList.add('active') // it must appear on page start
 
   addReviewBtn.addEventListener('click', () => {
     overlay.classList.add('active')
@@ -47,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.remove('active')
     reviewForm.classList.remove('active')
     reviewModal.classList.remove('active')
+    discountModal.classList.remove('active')
     document.body.classList.remove('no-scroll')
   })
 

@@ -1,5 +1,5 @@
-<div class="overlay"></div>
-<div class="review-form">
+<div class="overlay active"></div>
+<div class="modal review-form">
   <button class="modal-close-button">
     <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="31" cy="31" r="31" fill="white"/>
@@ -63,12 +63,6 @@
   </form>
 </div>
 <div class="review-modal">
-  <button class="modal-close-button">
-    <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="31" cy="31" r="31" fill="white"/>
-      <path d="M44.1825 22.9691L39.4575 18.2441L31.2134 26.4882L22.9693 18.2441L18.2407 22.9727L26.4848 31.2167L18.2443 39.4573L22.9693 44.1823L31.2098 35.9418L39.4539 44.1859L44.1825 39.4573L35.9384 31.2132L44.1825 22.9691Z" fill="#37322B"/>
-    </svg>
-  </button>
   <div class="review-full">
     <img class="review-full-img" src="images/dist/review/1.jpg" alt="">
     <div class="review-full-content">
@@ -104,5 +98,20 @@
       </div>
       <p class="review-full-text">Отличная подушка! Были большие проблемы с шейным отделом позвоночника (сильные боли, переходящие в плечо и руку) после приобретения подушки проблемы значительно уменьшились (пользуюсь подушкой 3 недели). Удобно спать как на спине так и на боку. До этого у меня была ортопедическая подушка другой фирмы вот это был ужас: жесткая, голова опрокидывалась назад спать было невозможно. Рекомендую всем у кого есть проблемы аналогичные моим.</p>
     </div>
+  </div>
+</div>
+<div class="modal discount-modal">
+  <div>
+    <div class="discount-modal-icon">
+      <!--замени svg ниже на svg подарка. его высоту пропиши в padding-top у "discount-modal-text" ниже-->
+
+      <svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="200" fill="#C4C4C4"/>
+      </svg>
+    </div>
+    <p style="padding-top: 180px;" class="discount-modal-text">Здравствуйте! активируйте свой купон на скидку</p>
+    <h1 class="product-price">20%</h1>
+    <p class="discount-modal-text">на модель<br>бестселлер. Скидка действует только 20 минут.</p>
+    <a href="#" class="button mt-4 button-danger">Активировать</a>
   </div>
 </div>
