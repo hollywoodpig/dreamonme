@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const tel = document.querySelector('.input-tel')
   const mask = new IMask(tel, {
-    mask: '+7 (000)000-00-00',
+    mask: '+7(000)000-00-00',
     lazy: false
   })
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const reviewForm = document.querySelector('.review-form')
   const overlay = document.querySelector('.overlay')
   const closeModalBtn = document.querySelector('.modal-close-button')
-  const discountModal = document.querySelector('.discount-modal');
+  const discountModal = document.querySelector('.discount-modal')
 
   discountModal.classList.add('active') // it must appear on page start
 
@@ -127,4 +127,25 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
 
+  /* order form validation */
+
+  const orderForm = document.querySelector('.order-form')
+  const input = orderForm.querySelector('.input-tel')
+  const phoneRegExp = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
+
+  orderForm.addEventListener('submit', e => {
+    e.preventDefault() // no reload !!
+
+    const validate = phoneRegExp.test(input.value)
+
+    if (!validate) {
+      input.classList.add('failed')
+      orderForm.querySelector('.error-text').textContent = 'Введите корректный номер'
+    } else {
+      input.classList.remove('failed')
+      orderForm.querySelector('.error-text').textContent = ''
+    }
+
+    // отправлять данные здесь
+  })
 })

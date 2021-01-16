@@ -152,11 +152,21 @@
 
 .input,
 .textarea {
+  &.failed {
+    border-color: $danger;
+  }
+
   &::placeholder {
     font-size: 18px;
     color: $black;
     font-weight: 400;
   }
+}
+
+.error-text {
+  color: $danger;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 a.button {
