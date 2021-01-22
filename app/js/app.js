@@ -32,12 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModalBtn = document.querySelector('.modal-close-button')
   const discountModal = document.querySelector('.discount-modal')
 
-  discountModal.classList.add('active') // it must appear on page start
-
-  if (document.body.contains(discountModal)) {
-    overlay.classList.add('active')
-  }
-
   addReviewBtn.addEventListener('click', () => {
     overlay.classList.add('active')
     reviewForm.classList.add('active')
